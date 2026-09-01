@@ -1,0 +1,1 @@
+This package is developed by KGPTalkie. You are free to use this. License type is MIT.
