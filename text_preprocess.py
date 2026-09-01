@@ -17,10 +17,20 @@ from deep_translator import GoogleTranslator
 from langdetect import detect
 from deep_translator import MyMemoryTranslator
 
+import nltk
+
 fpath = os.path.join(os.path.dirname(__file__), 'data/contractions.json')
 contractions = json.load(open(fpath))
 
 nlp = spacy.load('en_core_web_sm')
+
+def download_nltk_packages():
+    nltk.download('stopwords')
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('tagsets')
+    nltk.download('wordnet')
+    nltk.download('maxent_ne_chunker')
+    nltk.download('punkt')
 
 def word_count(x):
     return len(x.split())
