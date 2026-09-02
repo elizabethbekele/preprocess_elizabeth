@@ -16,12 +16,12 @@ def extract_features(x):
     }
 
 # Cleaning Text
-def clean_text(x):
-    text = to_lower_case(x)
-    text = contraction_to_expansion(x)
-    text = remove_emails(x)
-    text = remove_urls(x)
-    text = remove_html_tags(x)
-    text = remove_special_chars(x)
-    text = lemmatize(x)
+def clean_text(text):
+    text = to_lower_case(text)
+    text = contraction_to_expansion(text)
+    text = remove_emails(text)
+    text = remove_urls(text)
+    text = remove_html_tags(text)
+    text = remove_special_chars(text)
+    text = lemmatize(text)
     return text
