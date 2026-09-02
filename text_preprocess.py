@@ -159,7 +159,7 @@ def pluralize_words(x):
     return ' '.join([word.pluralize() if tag in ['NN'] else word for word, tag in blob.tags])
 
 def sentiment_analysis(x):
-    return Textblob(x, analyzer = NaiveBayesAnalyzer()).sentiment.classification
+    return TextBlob(x, analyzer = NaiveBayesAnalyzer()).sentiment.classification
 
 ## Language Code: https://www.loc.gov/standards/iso639-2/php/code_list.php
 
