@@ -7,7 +7,7 @@ import re
 import spacy
 import unicodedata
 from bs4 import BeautifulSoup
-from textblob import TextBlob
+from textblob import Textblob
 from textblob import Word
 from textblob.sentiments import NaiveBayesAnalyzer
 from spacy.lang.en.stop_words import STOP_WORDS as stopwords
@@ -18,18 +18,19 @@ from langdetect import detect
 from deep_translator import MyMemoryTranslator
 
 import nltk
-nltk.download('stopwords')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('tagsets')
-nltk.download('wordnet')
-nltk.download('maxent_ne_chunker')
-nltk.download('punkt')
-
 
 fpath = os.path.join(os.path.dirname(__file__), 'data/contractions.json')
 contractions = json.load(open(fpath))
 
 nlp = spacy.load('en_core_web_sm')
+
+def download_nltk_data():
+    nltk.download('stopwords')
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('tagsets')
+    nltk.download('wordnet')
+    nltk.download('maxent_ne_chunker')
+    nltk.download('punkt')
 
 def word_count(x):
     return len(x.split())
