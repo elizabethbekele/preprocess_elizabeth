@@ -13,7 +13,7 @@ setuptools.setup(
     author='Elizabeth Bekele',
     author_email='elizabethbekele07@gmail.com',
     description='This is a text preprocessing package',
-    long_descriotion=long_description,
+    long_description=long_description,
     long_description_content_type='text/markdown',
     packages=setuptools.find_packages(),
     classifiers=[
