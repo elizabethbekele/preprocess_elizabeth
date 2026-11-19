@@ -16,8 +16,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=setuptools.find_packages(),
-    package_data = {"preprocess_elizabeth": ["data/*.json"]},
     include_package_data=True,
+    package_data = {"preprocess_elizabeth": ["data/*.json"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "LICENSE :: OSI Approved :: MIT License",
