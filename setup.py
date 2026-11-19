@@ -8,7 +8,6 @@ with open('requirements.txt') as fp:
 
 setuptools.setup(
     name = 'preprocess_elizabeth',
-    include_package_data = True,
     version = '0.1',
     author='Elizabeth Bekele',
     author_email='elizabethbekele07@gmail.com',
